@@ -7,22 +7,74 @@
   --red: #d72323;
 }
 
+@font-face {
+  font-family: "NexonGothic";
+  font-weight: normal;
+  src: url("assets/font/NEXON_Gothic.otf") format("otf");
+  src: url("assets/font/NEXON_Gothic.tff") format("tff");
+  src: url("assets/font/NEXON_Gothic.woff") format("woff");
+}
+
+* {
+  font-family: N;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
 body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
   background: #eeeeee;
 }
 
 /* ===== header ====== */
 .header {
+  position: sticky;
+  display: block;
   width: 100%;
   height: 6%;
+  margin-top: 2.5%;
+}
+.header__container {
+  width: 100%;
+  height: 100%;
+}
+.header__icon {
+  font-size: 180%;
 }
 
-.header__icon {
-  width: 8%;
-  height: 62%;
+#header-menu {
+  position: relative;
+  left: 2%;
+}
+#header-search {
+  position: relative;
+  float: right;
+  right: 5%;
+}
+#header-alarm {
+  position: relative;
+  float: right;
+  right: 3%;
 }
 /* ====== main section ====== */
 .main__section {
   width: 100%;
   height: 94%;
+}
+
+/* ====== My Game ====== */
+
+.myGame__container {
+  display: flex;
+  justify-content: center;
+}
+.myGameTitle {
+  text-align: center;
+  font-family: NexonGothic;
+  width: 75%;
+  height: 4%;
 }

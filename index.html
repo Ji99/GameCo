@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>겜코</title>
-
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- ====== phosphor-icons ====== -->
     <script src="https://unpkg.com/phosphor-icons"></script>
 </head>
@@ -13,12 +13,26 @@
     <header class="header">
         <div class="header__container">
             <i class="ph-list header__icon" id="header-menu"></i>
+            <i class="ph-bell-simple header__icon" id="header-alarm"></i>            
             <i class="ph-magnifying-glass header__icon" id="header-search"></i>
-            <i class="ph-bell-simple header__icon" id="header-alarm"></i>
+            
         </div>
     </header>
-    <section class="main__container">
 
+    <section class="main__container">
+        <div class="myGame__container">
+            <div class="myGameTitle">
+                <i class="ph-star-fill" id="myGameIcon"></i>
+                나의 게임
+            </div>
+            <div class="myGameBackLine"></div>
+            <div class="myGameList">
+                <div id="myGame1"></div>
+                <div id="myGame2"></div>
+                <div id="myGame3"></div>
+                <div id="myGame4"></div>
+            </div>
+        </div>
     </section>
 </body>
 </html>
