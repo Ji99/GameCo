@@ -1,3 +1,4 @@
+// ====== Game list Swiper ======
 let swiper = new Swiper(".myGameList__container", {
   loop: true,
   cssMode: true,
