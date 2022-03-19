@@ -8,14 +8,18 @@
 }
 
 @font-face {
-  font-family: NexonGothic;
-  src: url("/assets/font/NEXON_Gothic.woff") format("woff");
-  src: url("/assets/font/NEXON_Gothic.otf") format("otf");
-  src: url("/assets/font/NEXON_Gothic.ttf") format("tff");
+  font-family: "NexonGothic";
+  src: url("/assets/font/NEXON_Gothic.woff") format("woff"),
+    url("/assets/font/NEXON_Gothic.otf") format("otf"),
+    url("/assets/font/NEXON_Gothic.ttf") format("tff");
 }
 
 * {
-  font-family: NexonGothic;
+  font-family: "NexonGothic";
+}
+
+.hidden {
+  display: none;
 }
 
 html {
@@ -34,12 +38,14 @@ body {
   position: sticky;
   display: block;
   width: 100%;
-  height: 6%;
-  margin-top: 2.5%;
+  height: 5%;
+  margin-bottom: 8%;
 }
 .header__container {
+  background: var(--main-grey-dark);
   width: 100%;
   height: 100%;
+  padding-top: 2.5%;
 }
 .header__icon {
   font-size: 180%;
@@ -73,18 +79,25 @@ body {
   height: 38%;
   justify-content: center;
 }
+
+#myGame-Icon {
+  color: #ffff00;
+  margin-right: 1%;
+}
 .myGameTitle__container {
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--main-grey-dark);
+  color: var(--blue-grey);
   width: 75%;
   height: 10%;
   border-radius: 10px;
+  margin-bottom: 5%;
 }
 
-#myGameIcon {
-  color: #ffff00;
+.myGameTitle__container span {
+  font-weight: 600;
 }
 
 .myGameBackLine {
@@ -118,7 +131,7 @@ body {
   height: 100%;
   border-radius: 20px;
   padding-top: 5%;
-  padding-left: 13%;
+  padding-left: 12%;
 }
 
 div[id^="myGame"] {
@@ -138,6 +151,139 @@ div[id^="myGame"] {
   border-radius: 20px;
 }
 
+/* ====== GameList swiper ====== */
 .swiper-pagination-bullet-active {
   background-color: var(--red);
+}
+
+/* ====== Game Board ====== */
+
+.gameBoard__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 390px;
+  background: var(--main-grey);
+  margin-top: 10%;
+  overflow: hidden;
+}
+
+.gameBoardTitle__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 40px;
+  color: var(--blue-grey);
+  background: var(--main-grey-dark);
+  border-radius: 10px;
+  margin-top: 4%;
+}
+.gameBoardTitle__container span {
+  font-weight: 600;
+}
+
+#gameBoardTitle-icon {
+  font-size: 120%;
+  margin-right: 1%;
+}
+
+/* 게시판 창 늘림 */
+.gameBoardBtn__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -14px;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  background: var(--main-grey-dark);
+  border-radius: 50%;
+}
+
+#gameBoardBtn {
+  font-size: 12px;
+}
+
+/* ====== game article ====== */
+
+.gameBoardArticle__container {
+  display: block;
+  justify-content: center;
+  width: 80%;
+  height: 280px;
+  margin-top: 5%;
+}
+
+.gameArticle__container {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid var(--main-grey-dark);
+  padding-bottom: 3px;
+}
+
+.gameArticle {
+  display: flex;
+  width: 100%;
+  height: 38px;
+}
+
+.gameArticleData {
+  width: 100%;
+}
+
+#gameArticle-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  margin-right: 5%;
+}
+
+.gameArticleData1 {
+  display: flex;
+}
+
+#articleName {
+  font-weight: bold;
+  margin-right: 5%;
+}
+#commentIcon {
+  font-size: 90%;
+  margin-right: 1%;
+}
+#commentCount {
+  font-size: 80%;
+}
+
+.gameArticleData2 {
+  display: flex;
+  align-items: initial;
+  margin-top: 2%;
+}
+
+#article-gameName {
+  font-size: 85%;
+  font-weight: bold;
+  margin-right: 3%;
+}
+
+#article-userLevel {
+  font-size: 85%;
+  margin-right: 2%;
+}
+#article-userName {
+  font-size: 85%;
+  margin-right: 5%;
+}
+
+#hitsIcon {
+  font-size: 90%;
+  margin-right: 1%;
+}
+#hitsCount {
+  font-size: 90%;
 }
